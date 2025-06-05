@@ -35,3 +35,9 @@ class Stack
             cout << "push value: " << value << endl; 
             return value;
         }
+
+        //isEmpty operation: check if the stack is empty
+        bool isEmpty() 
+        {
+            return top == NULL; // Return true if the top pointer is null, indicating the stack is empty
+        }
