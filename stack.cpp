@@ -55,3 +55,13 @@ class Stack
             top = top->next; // Update the top pointer to the next node
            
         }
+
+        //pek/top operation: return the top element of the stack without removing it
+        void peek()
+        {
+            if (isEmpty()) 
+            {
+                cout << "List is empty." << endl; 
+                return; //if the stack is empty, print a message and return
+            }
+           
