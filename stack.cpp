@@ -96,4 +96,9 @@ int main()
 
         switch (choice)
         {
+        case 1:
+            cout << "Enter value to push: ";
+            cin >> value;
+            stack.push(value);// push the enterned value onto the stack
+            break;
        
