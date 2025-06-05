@@ -43,4 +43,12 @@ class Stack
         }
 
         //pop operation: remove and return the top element of the stack
-        
+        void pop() 
+        {
+            if (isEmpty()) 
+            {
+                cout << "Stack is empty." << endl; 
+                return; //if the stack is empty, print a message and return
+            }
+         
+           
