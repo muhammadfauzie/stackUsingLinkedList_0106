@@ -45,78 +45,14 @@ class Stack
         //pop operation: remove and return the top element of the stack
         void pop() 
         {
-            if (isEmpty()) 
+            Node* current = top; // Create a temporary pointer to the current top node
+            if (isEmpty())
             {
-                cout << "Stack is empty." << endl; 
-                return; //if the stack is empty, print a message and return
+                cout << "Stack is empty." << endl;
+                return; // If the stack is empty, print a message and return
             }
-         
-            cout << "popped value: " << top->data << endl; 
-            top = top->next; // Update the top pointer to the next node
-           
+            cout << "pop value: " << current->data << endl; 
+            top = temp->next; // Update the top pointer to the next node
+            temp = nullptr; //free the memory of the popped node
+          
         }
-
-        //pek/top operation: return the top element of the stack without removing it
-        void peek()
-        {
-            if (isEmpty()) 
-            {
-                cout << "List is empty." << endl; 
-                return; //if the stack is empty, print a message and return
-            }
-            else
-            {
-                Node* current = top;
-                while (current !=NULL)
-                {
-                    cout << cuurent->data << " " << endl;
-                    current = current->next;
-                }
-                cout << endl;
-            } // Return the value of the top node 
-        }
-        
-};
-
-int main()
-{
-    Stack stack;
-
-    int choice = 0;
-    int value
-
-    while (choice !=4)
-    {
-        cout << "1. push\n";
-        cout << "2. pop\n";
-        cout << "3. peek\n";
-        cout << "4. exit\n";
-        cout << "Enter your choice: ";
-        cin >> choice;
-
-        switch (choice)
-        {
-        case 1:
-            cout << "Enter value to push: ";
-            cin >> value;
-            stack.push(value);// push the enterned value onto the stack
-            break;
-        case 2:
-            stack.pop(); // pop the topmost element from the stack
-            break;
-        case 3:
-            stack.peek(); 
-            break;
-        case 4:
-            cout << "Exiting program." << endl; 
-            break;
-        default:
-            cout << "Invalid choice. Please try again." << endl; 
-            break;
-        }
-
-        cout << endl; 
-    }
-
-    return 0; 
-}
