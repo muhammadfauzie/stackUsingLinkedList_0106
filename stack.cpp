@@ -25,4 +25,5 @@ class Stack
             top = NULL; // Initialize the stack with a null top pointer
         }
 
-    };      
+        //push operation: insert an element at the top of the stack
+       
